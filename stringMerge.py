@@ -46,10 +46,18 @@ def solution(s1, s2):
         # print(s3)
         # print(t)
 
-    print(lst)
-    
+    mn_lst = 200
+    for i in lst:
+        if len(i)<mn_lst:
+            mn_lst=len(i)
+    lst.sort()
+    for i in lst:
+        if len(i)==mn_lst:
+            answer=i
+            break
+
     if s1==s2:  
-        answer =s1
+        answer=s1
         
     return answer
 
